@@ -52,7 +52,8 @@ public class BaseTest {
       default:
         System.setProperty(
                 "webdriver.chrome.driver",
-                new File(BaseTest.class.getResource("LinuxDrivers/chromedriver").getFile()).getPath());
+                //new File(BaseTest.class.getResource("LinuxDrivers/chromedriver").getFile()).getPath());
+                new File(BaseTest.class.getResource("WindowsDrivers/chromedriver.exe").getFile()).getPath());
         return new ChromeDriver();
     }
   }

@@ -47,7 +47,5 @@ public class CreateNewProductTest extends BaseTest {
     // close driver
     closeChromeDriver();
 
-
-
   }
 }

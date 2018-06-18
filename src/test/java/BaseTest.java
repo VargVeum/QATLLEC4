@@ -36,23 +36,23 @@ public class BaseTest {
       case EDGE:
         System.setProperty(
                 "webdriver.edge.driver",
-                new File(BaseTest.class.getResource("/MicrosoftWebDriver.exe").getFile()).getPath());
+                new File(BaseTest.class.getResource("WindowsDrivers/MicrosoftWebDriver.exe").getFile()).getPath());
         return new EdgeDriver();
       case IE:
         System.setProperty(
                 "webdriver.ie.driver",
-                new File(BaseTest.class.getResource("/IEDriverServer.exe").getFile()).getPath());
+                new File(BaseTest.class.getResource("WindowsDrivers/IEDriverServer.exe").getFile()).getPath());
         return new InternetExplorerDriver();
       case FIREFOX:
         System.setProperty(
                 "webdriver.geckodriver.driver",
-                new File(BaseTest.class.getResource("/geckodriver.exe").getFile()).getPath());
+                new File(BaseTest.class.getResource("WindowsDrivers/geckodriver.exe").getFile()).getPath());
         return new FirefoxDriver();
       case CHROME:
       default:
         System.setProperty(
                 "webdriver.chrome.driver",
-                new File(BaseTest.class.getResource("/chromedriver.exe").getFile()).getPath());
+                new File(BaseTest.class.getResource("LinuxDrivers/chromedriver").getFile()).getPath());
         return new ChromeDriver();
     }
   }

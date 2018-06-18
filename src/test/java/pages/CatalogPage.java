@@ -21,22 +21,19 @@ public class CatalogPage  {
     productButton.click();
   }
 
-  // вывести значение названия продукта из рандомайзера
   public void enterProductName(String name){
     WebElement productName = driver.findElement(By.id("form_step1_name"));
     productName.sendKeys(name);
   }
 
-  // вывести значение количества из рандомайзера
   public void enterProductQuantity(int quantity){
     WebElement productQuantity = driver.findElement(By.id("form_step1_qty_0_shortcut"));
-    productQuantity.sendKeys(quantity);
+    productQuantity.sendKeys(Integer.toString(quantity));
   }
 
-  // вывести значение цены из рандомайзера
   public void enterProductPrice(double price){
     WebElement productPrice = driver.findElement(By.id("form_step1_price_shortcut"));
-    productPrice.sendKeys(price);
+    productPrice.sendKeys(Double.toString(price));
   }
 
   public void clickSwitchToggle(){

@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 public class ShopPage {
   private final WebDriver driver;
@@ -23,9 +22,17 @@ public class ShopPage {
     WebElement searchMyProduct = (WebElement) driver.findElements(By.cssSelector("h1[class='h3 product-title']"));
     searchMyProduct.click();
 
-
-    searchMyProduct.click();
-
   }
 
+  public byte[] getProductName() {
+    return getProductName();
+  }
+
+  public byte[] getProductQuantity() {
+    return getProductQuantity();
+  }
+
+  public byte[] getProductPrice() {
+    return getProductPrice();
+  }
 }

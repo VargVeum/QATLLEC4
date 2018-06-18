@@ -41,10 +41,9 @@ public class CreateNewProductTest extends BaseTest {
     loginPage.openShopURL();
     shopPage.goToAllProducts();
     shopPage.openMyTestProduct();
-
-    //Assert.assertEquals(shopPage.getProductName(), product.getName(), "Product name isn't as expected");
-
-
+    Assert.assertEquals(shopPage.getProductName(), product.getName(), "Product name isn't as expected");
+    Assert.assertEquals(shopPage.getProductQuantity(), product.getQuantity(), "Quantity isn't as expected");
+    Assert.assertEquals(shopPage.getProductPrice(), product.getPrice(), "Price isn't as expected");
     // close driver
     closeChromeDriver();
 
